@@ -557,4 +557,343 @@ hr {
         border-right: none !important;
         padding: 0;
     }
+
+
+
+
+
+
+
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Oswald:wght@700&display=swap');
+
+/* Global Variables & Reset */
+:root {
+  --bg-dark: #0a0a0a;
+  --card-bg: #0d0d0d;
+  --primary-gold: #f4ab22;
+  --text-white: #ffffff;
+  --text-gray: #cccccc;
+  --border-gold: rgba(244, 171, 34, 0.4);
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-gray);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Common Typography & Accents */
+.script-subtitle {
+  font-family: 'Caveat', cursive;
+  color: var(--primary-gold);
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.script-subtitle::before,
+.script-subtitle::after {
+  content: '';
+  height: 1px;
+  width: 60px;
+  background-color: var(--primary-gold);
+}
+
+.bold-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.2rem;
+  line-height: 1.1;
+  color: var(--text-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bold-title span {
+  color: var(--primary-gold);
+  display: block;
+}
+
+.heart-divider {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 1rem;
+  margin: 10px 0 20px 0;
+}
+
+/* Section 1: Hero / Story */
+.hero-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text .heart-divider {
+  text-align: left;
+}
+
+.hero-text p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  color: #dddddd;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
+}
+
+/* Section 2: Features Grid */
+.features-section {
+  margin-bottom: 70px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature-item {
+  text-align: center;
+  position: relative;
+  padding: 0 10px;
+}
+
+.feature-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--primary-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px auto;
+  color: var(--primary-gold);
+  font-size: 1.2rem;
+}
+
+.feature-item h4 {
+  color: var(--text-white);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.feature-item p {
+  font-size: 0.75rem;
+  color: #aaaaaa;
+  line-height: 1.4;
+}
+
+/* Section 3: Our Journey */
+.journey-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.journey-text {
+  flex: 1;
+}
+
+.journey-text .script-subtitle {
+  justify-content: flex-start;
+}
+
+.journey-text .script-subtitle::after {
+  width: 80px;
+}
+
+.journey-text .script-subtitle::before {
+  display: none;
+}
+
+.journey-text .heart-divider {
+  text-align: left;
+}
+
+.journey-text p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #dddddd;
+}
+
+.journey-image {
+  flex: 1.3;
+}
+
+.journey-image img {
+  width: 100%;
+  border-radius: 12px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
+}
+
+/* Section 4: Signature Cards */
+.signature-section {
+  margin-bottom: 70px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.card-badge {
+  background-color: var(--primary-gold);
+  color: #000000;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.card p {
+  font-size: 0.72rem;
+  color: #bbbbbb;
+  line-height: 1.3;
+}
+
+/* Section 5: Footer / Banner */
+.banner-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.banner-text {
+  flex: 1;
+  text-align: center;
+}
+
+.crown-icon {
+  color: var(--primary-gold);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.banner-text .bold-title {
+  font-size: 2.2rem;
+}
+
+.banner-text p {
+  font-size: 0.95rem;
+  color: #dddddd;
+  margin-top: 15px;
+}
+
+.final-script {
+  font-family: 'Caveat', cursive;
+  color: var(--primary-gold);
+  font-size: 2.2rem;
+  margin-top: 10px;
+}
+
+.banner-image {
+  flex: 1.1;
+}
+
+.banner-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+  .hero-section, 
+  .journey-section, 
+  .banner-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text .heart-divider,
+  .journey-text .heart-divider,
+  .journey-text .script-subtitle {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .features-grid, 
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-item::after {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .features-grid, 
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
