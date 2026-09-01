@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>Shyam Dabeli</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+         <h1>Shyam Dabeli</h1>
+    </body>
+    <script src="script.js"></script>
+</html>
+
+
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            SHYAM 
+            <span>DABELI</span>
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="menu.html">Menu</a></li>
+
+            <li><a href="gallery.html">Gallery</a></li>
+
+            <li><a href="reviews.html">Reviews</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+             <a href="ordernow.html" class="btn-outline">Order Now</a>
+    </nav>
+
+</header>
+
+
+    <style>
+        :root {
+            --bg-dark: #080808;
+            --bg-card: #121212;
+            --primary-gold: #ffb400;
+            --accent-red: #e50914;
+            --text-light: #ffffff;
+            --text-muted: #aaaaaa;
+            --border-color: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header (Logo & Order Button Only) */
+        header {
+            background-color: var(--bg-dark);
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            border: 2px solid var(--primary-gold);
+            border-radius: 25px 25px 0 25px;
+            padding: 5px 15px;
+            text-align: center;
+        }
+
+        .logo h1 {
+            color: var(--primary-gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        .logo span {
+            font-size: 0.65rem;
+            color: #fff;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .btn-order {
+            background-color: var(--primary-gold);
+            color: #000;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .script-font {
+            font-family: 'Great Vibes', cursive;
+            color: var(--primary-gold);
+            font-size: 2.5rem;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin: -10px 0 10px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Filter Buttons */
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--primary-gold);
+            color: var(--text-light);
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--primary-gold);
+            color: #000;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .gallery-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-tag {
+            background-color: var(--primary-gold);
+            color: #000;
+            font-weight: 700;
+            text-align: center;
+            padding: 4px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Banner Section */
+        .banner-section {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px dashed var(--border-color);
+            border-bottom: 1px dashed var(--border-color);
+            margin-bottom: 40px;
+        }
+
+        .banner-title {
+            color: var(--primary-gold);
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-visit {
+            background-color: var(--primary-gold);
+            color: #000;
+            font-weight: 700;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            padding: 40px 0 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr 1.5fr;
+            gap: 30px;
+            font-size: 0.85rem;
+        }
+
+        .footer-col h4 {
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .social-icons a {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .social-icons a.insta { background-color: #e1306c; }
+        .social-icons a.fb { background-color: #1877f2; }
+        .social-icons a.wa { background-color: #25d366; }
+
+        .deliver-box {
+            border: 1px dashed var(--primary-gold);
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="hero">
+            <div class="script-font">Our</div>
+            <h2>Gallery</h2>
+            <p>A glimpse of the love, flavor and happiness we serve in every dabeli.</p>
+            <p style="color: var(--primary-gold); font-size: 0.8rem; margin-top: 5px;">Made fresh. Made <span style="color:var(--accent-red)">with love.</span></p>
+        </section>
+
+        <div class="filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Dabeli</button>
+            <button class="filter-btn">Special Dabeli</button>
+            <button class="filter-btn">Preparation</button>
+            <button class="filter-btn">Our Outlet</button>
+        </div>
+
+        <div class="gallery-grid">
+            
+            <div class="gallery-card">
+                <img src="kachhi_image.jpeg" alt="Kachhi Dabeli">
+                <div class="card-tag">Kachhi Dabeli</div>
+            </div>
+            <div class="gallery-card">
+                <img src="butter_image.jpeg" alt="Butter Dabeli">
+                <div class="card-tag">Butter Dabeli</div>
+            </div>
+            <div class="gallery-card">
+                <img src="chesses_image.jpeg" alt="Cheese Dabeli">
+                <div class="card-tag">Cheese Dabeli</div>
+            </div>
+            <div class="gallery-card">
+                <img src="double_image.jpeg" alt="Double Dabeli">
+                <div class="card-tag">Double Dabeli</div>
+            </div>
+            <div class="gallery-card">
+                <img src="jain_image.jpeg" alt="Jain Dabeli">
+                <div class="card-tag">Jain Dabeli</div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="image1.jpeg" alt="Dabeli Plate">
+            </div>
+            <div class="gallery-card">
+                <img src="image2.jpeg" alt="Spiced Masala Mix">
+            </div>
+            <div class="gallery-card">
+                <img src="image3.jpeg" alt="Preparation Top">
+            </div>
+            <div class="gallery-card">
+                <img src="image4.jpeg" alt="Tawa Toasting">
+            </div>
+            <div class="gallery-card">
+                <img src="image5.jpeg" alt="Serving Tray">
+            </div>
+
+            <div class="gallery-card">
+                <img src="image6.jpeg" alt="Dabeli Close-up">
+            </div>
+            <div class="gallery-card">
+                <img src="image7.jpeg" alt="Ingredients Bowls">
+            </div>
+            <div class="gallery-card">
+                <img src="image8.jpeg" alt="Single Dabeli">
+            </div>
+            <div class="gallery-card">
+                <img src="image9.jpeg" alt="Takeaway Packaging">
+            </div>
+            <div class="gallery-card">
+                <img src="image10.jpeg" alt="Live Cooking">
+            </div>
+
+        </div>
+
+        <section class="banner-section">
+            <p class="script-font" style="font-size: 1.8rem;">Good Food • Good Mood • Great Memories</p>
+            <p style="text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; margin-top: 10px;">Thank You For Supporting</p>
+            <h3 class="banner-title">Shyam Dabeli</h3>
+            <button class="btn-visit">Visit Us Today!</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            
+            <div>
+                <div class="logo" style="display:inline-block; margin-bottom: 15px;">
+                    <h1>Shyam</h1>
+                    <div style="font-weight: bold; color:#fff; font-size:0.8rem;">DABELI</div>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.75rem;">We serve delicious, authentic and hygienic dabeli made with the finest ingredients and our special masala.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">&gt; Home</a></li>
+                    <li><a href="#">&gt; About Us</a></li>
+                    <li><a href="#">&gt; Menu</a></li>
+                    <li><a href="#">&gt; Gallery</a></li>
+                    <li><a href="#">&gt; Reviews</a></li>
+                    <li><a href="#">&gt; Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Outlet</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot" style="color:var(--primary-gold)"></i> Shyam Dabeli, Street Food Corner, Bhavnagar, Gujarat - 364002</li>
+                    <li style="margin-top: 10px;"><i class="fa-solid fa-phone" style="color:var(--primary-gold)"></i> +91 98765 43210</li>
+                    <li style="margin-top: 10px;"><i class="fa-solid fa-clock" style="color:var(--primary-gold)"></i> 10:00 AM - 10:30 PM (All Days)</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="insta"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="fb"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="wa"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <div class="deliver-box">
+                    <i class="fa-solid fa-

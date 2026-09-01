@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+   
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+    </body>
+    <script src="script.js"></script>
+</html>
+
+
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            SHYAM 
+            <span>DABELI</span>
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="#">Menu</a></li>
+
+            <li><a href="gallery.html">Gallery</a></li>
+
+            <li><a href="reviews.html">Reviews</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+             <a href="ordernow.html" class="btn-outline">Order Now</a>
+    </nav>
+
+</header>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .menu-container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 2000px;
+            background-color: #000000;
+            border: 2px solid #e5a93c;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Header Styles */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .brand-box {
+            border: 2px dashed #f2aa00;
+            border-radius: 20px;
+            display: inline-block;
+            padding: 8px 20px;
+            margin-bottom: 5px;
+        }
+
+        .brand-title {
+            color: #f2f2f2;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px #f2aa00;
+        }
+
+        .brand-subtitle {
+            background-color: #f2aa00;
+            color: #000;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        .main-title {
+            color: #f2aa00;
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+
+        .sub-header-text {
+            color: #cccccc;
+            font-size: 10px;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        /* Section Dividers */
+        .section-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f2aa00;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 20px 0 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title::before, .section-title::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #f2aa00;
+            margin: 0 10px;
+        }
+
+        /* Signature Dabeli Section */
+        .dabeli-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .dabeli-card {
+            background-color: #111111;
+            border: 1px solid #222222;
+            border-radius: 6px;
+            padding: 8px 4px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .item-badge {
+            background-color: #f2aa00;
+            color: #000;
+            font-size: 9px;
+            font-weight: bold;
+            padding: 2px 0;
+            border-radius: 3px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .price-tag {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .item-desc {
+            color: #aaaaaa;
+            font-size: 8px;
+            line-height: 1.2;
+        }
+
+        /* Bottom Section Grid */
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Extras Section */
+        .extras-container, .combos-container {
+            border: 1px solid #333333;
+            border-radius: 6px;
+            padding: 10px;
+            background-color: #0a0a0a;
+        }
+
+        .inner-title {
+            background-color: #f2aa00;
+            color: #000000;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            padding: 4px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .extra-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            padding: 4px 0;
+            border-bottom: 1px dotted #333333;
+        }
+
+        .extra-item:last-child {
+            border-bottom: none;
+        }
+
+        .extra-name {
+            color: #dddddd;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .extra-price {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* Combos Section */
+        .combo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            border-bottom: 1px dotted #333333;
+        }
+
+        .combo-item:last-child {
+            border-bottom: none;
+        }
+
+        .combo-details {
+            font-size: 10px;
+        }
+
+        .combo-name {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .combo-sub {
+            color: #aaaaaa;
+            font-size: 8px;
+        }
+
+        .combo-price-badge {
+            background-color: #f2aa00;
+            color: #000000;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        /* Why Choose Us Section */
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .feature-box {
+            background-color: #111111;
+            padding: 8px 4px;
+            border-radius: 6px;
+            border: 1px solid #222222;
+        }
+
+        .feature-title {
+            color: #f2aa00;
+            font-size: 9px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .feature-desc {
+            color: #aaaaaa;
+            font-size: 7.5px;
+            line-height: 1.2;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            border-top: 1px dashed #333333;
+            padding-top: 10px;
+        }
+
+        .thank-you-badge {
+            background-color: #f2aa00;
+            color: #000000;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 4px 15px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        .footer-sub {
+            color: #aaaaaa;
+            font-size: 9px;
+        }
+
+        .footer-tagline {
+            color: #f2aa00;
+            font-size: 11px;
+            font-style: italic;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu-container">
+    <!-- Header -->
+    <div class="header">
+        <div class="main-title">OUR MENU</div>
+        <div class="sub-header-text">FRESH INGREDIENTS. AUTHENTIC TASTE.</div>
+    </div>
+
+    <!-- Section 1: Signature Dabeli -->
+    <div class="section-title">Our Signature Dabeli</div>
+    <div class="dabeli-grid">
+        <div class="dabeli-card">
+            <div class="item-badge">Kachhi Dabeli</div>
+            <div class="price-tag">₹50</div>
+            <div class="item-desc">The classic spicy & tangy dabeli loaded with our special masala, peanuts, pomegranate, sev & fresh onions.</div>
+        </div>
+        <div class="dabeli-card">
+            <div class="item-badge">Butter Dabeli</div>
+            <div class="price-tag">₹60</div>
+            <div class="item-desc">A rich and buttery delight that melts in your mouth with the perfect blend of spices & dabeli masala.</div>
+        </div>
+        <div class="dabeli-card">
+            <div class="item-badge">Cheese Dabeli</div>
+            <div class="price-tag">₹100</div>
+            <div class="item-desc">Loaded with cheese and our signature masala for all the cheese lovers out there!</div>
+        </div>
+        <div class="dabeli-card">
+            <div class="item-badge">Double Dabeli</div>
+            <div class="price-tag">₹70</div>
+            <div class="item-desc">Double the masala, double the taste! For when your hunger demands more.</div>
+        </div>
+        <div class="dabeli-card">
+            <div class="item-badge">Jain Dabeli</div>
+            <div class="price-tag">₹45</div>
+            <div class="item-desc">A jain special dabeli made without onion and garlic, yet full of authentic taste.</div>
+        </div>
+    </div>
+
+    <!-- Section 2: Two Columns (Extra Toppings & Combos) -->
+    <div class="two-column-section">
+        <!-- Extra Toppings -->
+        <div class="extras-container">
+            <div class="inner-title">Extra Toppings</div>
+            <div class="extra-item">
+                <span class="extra-name">🍃 Extra Cheese</span>
+                <span class="extra-price">₹20</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">🍃 Extra Butter</span>
+                <span class="extra-price">₹15</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">🍃 Extra Sev</span>
+                <span class="extra-price">₹10</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">🍃 Extra Masala</span>
+                <span class="extra-price">₹10</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">🍃 Extra Peanuts</span>
+                <span class="extra-price">₹10</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">🍃 Extra Pomegranate</span>
+                <span class="extra-price">₹15</span>
+            </div>
+        </div>
+
+        <!-- Dabeli Combos -->
+        <div class="combos-container">
+            <div class="inner-title">Dabeli Combos</div>
+            <div style="text-align: center; color: #aaaaaa; font-size: 8px; margin-bottom: 8px;">Makes your meal even better!</div>
+            
+            <div class="combo-item">
+                <div class="combo-details">
+                    <div class="combo-name">Classic Combo</div>
+                    <div class="combo-sub">Any Dabeli + Masala Cola</div>
+                </div>
+                <div class="combo-price-badge">₹80</div>
+            </div>
+
+            <div class="combo-item">
+                <div class="combo-details">
+                    <div class="combo-name">Cheese Combo</div>
+                    <div class="combo-sub">Cheese Dabeli + Masala Cola</div>
+                </div>
+                <div class="combo-price-badge">₹95</div>
+            </div>
+
+            <div class="combo-item">
+                <div class="combo-details">
+                    <div class="combo-name">Premium Combo</div>
+                    <div class="combo-sub">Double Dabeli + Masala Cola</div>
+                </div>
+                <div class="combo-price-badge">₹100</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Refreshing Drinks -->
+    <div class="section-title">Refreshing Drinks</div>
+
+    <!-- Section 4: Why Shyam Dabeli? -->
+    <div class="section-title">Why Shyam Dabeli?</div>
+    <div class="why-us-grid">
+        <div class="feature-box">
+            <div class="feature-title">Fresh Ingredients</div>
+            <div class="feature-desc">We use only the freshest spices, vegetables and premium quality potatoes.</div>
+        </div>
+        <div class="feature-box">
+            <div class="feature-title">Authentic Taste</div>
+            <div class="feature-desc">Our special masala recipe gives the real street taste.</div>
+        </div>
+        <div class="feature-box">
+            <div class="feature-title">Made With Love</div>
+            <div class="feature-desc">Every dabeli is prepared with care and passion.</div>
+        </div>
+        <div class="feature-box">
+            <div class="feature-title">Hygienic & Clean</div>
+            <div class="feature-desc">We maintain the highest standards of hygiene.</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="thank-you-badge">Thank You!</div>
+        <div class="footer-sub">FOR CHOOSING SHYAM DABELI</div>
+        <div class="footer-tagline">Taste That Stays With You ♡</div>
+    </div>
+</div>
+
+</body>
+</html>
